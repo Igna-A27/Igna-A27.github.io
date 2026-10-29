@@ -1,0 +1,155 @@
+/* ----- Colores y base ----- */
+:root {
+  --fondo: #0f172a;
+  --fondo-tarjeta: #1e293b;
+  --texto: #e2e8f0;
+  --acento: #38bdf8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;   /* desplazamiento suave al tocar el menú */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+/* ----- Menú ----- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  background: var(--fondo-tarjeta);
+  position: sticky;   /* queda fijo arriba al bajar */
+  top: 0;
+}
+
+.logo {
+  font-weight: bold;
+  color: var(--acento);
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav a {
+  color: var(--texto);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--acento);
+}
+
+/* ----- Secciones ----- */
+section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+h2 {
+  color: var(--acento);
+  margin-bottom: 1rem;
+}
+
+/* ----- Presentación ----- */
+.hero {
+  text-align: center;
+  padding: 6rem 1.5rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero p {
+  margin: 1rem 0 2rem;
+}
+
+.boton {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  background: var(--acento);
+  color: var(--fondo);
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.boton:hover {
+  opacity: 0.85;
+}
+
+/* ----- Proyectos ----- */
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.tarjeta {
+  background: var(--fondo-tarjeta);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.tarjeta img {
+  width: 100%;          /* la imagen se adapta al ancho de la tarjeta */
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+}
+
+.tarjeta a {
+  color: var(--acento);
+}
+
+/* ----- Habilidades ----- */
+.lista-habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  list-style: none;
+}
+
+.lista-habilidades li {
+  background: var(--fondo-tarjeta);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+/* ----- Contacto y pie ----- */
+#contacto a {
+  color: var(--acento);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--fondo-tarjeta);
+}
+
+/* ----- Celulares ----- */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
